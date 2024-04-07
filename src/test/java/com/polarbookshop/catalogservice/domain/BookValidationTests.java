@@ -27,6 +27,7 @@ public class BookValidationTests {
     void whenallfieldsareset(){
         var book= new Book("123","title","author",9.0);
         Set<ConstraintViolation<Book>> validate = validator.validate(book);
+        System.out.println("#####");
         assertThat(validate).isEmpty();
     }
 
